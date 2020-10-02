@@ -1,28 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { AsyncStorage, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Login({ navigation }) {
+export default function Home({ navigation }) {
   const navigationRef = React.useRef(null);
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 24 }}>Login</Text>
-      <TouchableOpacity
-        style={{
-          backgroundColor: "green",
-          padding: 10,
-          borderRadius: 5,
-          margin: 10,
-        }}
-        onPress={() => {
-          //   navigationRef.current?.navigate("SignUp");
-          AsyncStorage.setItem("loggedin", true);
-          navigation.push("Home");
-        }}
-      >
-        <Text style={{ color: "white", fontSize: 16 }}>Login</Text>
-      </TouchableOpacity>
+      <Text style={{ fontSize: 24 }}>Home</Text>
       <TouchableOpacity
         style={{
           backgroundColor: "blue",
@@ -35,7 +20,7 @@ export default function Login({ navigation }) {
           navigation.push("SignUp");
         }}
       >
-        <Text style={{ color: "white", fontSize: 16 }}>Goto SignUp</Text>
+        <Text style={{ color: "white", fontSize: 16 }}>LOGOUT</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
