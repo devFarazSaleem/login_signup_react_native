@@ -3,15 +3,15 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Login(navigation) {
+export default function Login({ navigation }) {
   const navigationRef = React.useRef(null);
   return (
     <View style={styles.container}>
       <Text>login</Text>
       <TouchableOpacity
         onPress={() => {
-          navigationRef.current?.navigate("SignUp");
-          //   navigation.push("SignUp");
+          //   navigationRef.current?.navigate("SignUp");
+          navigation.push("SignUp");
         }}
       >
         <Text>Goto SignUp</Text>
