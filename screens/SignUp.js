@@ -6,24 +6,23 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 export default function SignUp({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>SignUp</Text>
+      <Text style={{ fontSize: 24 }}>SignUp</Text>
       <TouchableOpacity
+        style={{
+          backgroundColor: "red",
+          padding: 10,
+          borderRadius: 5,
+          margin: 10,
+        }}
         onPress={() => {
           // navigationRef.current?.navigate("Login");
           // navigation.push("Login");
           navigation.pop();
         }}
       >
-        <Text>Goto login</Text>
+        <Text style={{ color: "white", fontSize: 16 }}>Goto login</Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          // navigationRef.current?.navigate("Login");
-        }}
-      >
-        <Text>RESET</Text>
-      </TouchableOpacity>
-      <StatusBar style="inverted" />
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -32,6 +31,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
 });
